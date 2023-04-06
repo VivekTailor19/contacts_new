@@ -17,6 +17,8 @@ class ViewProfile extends StatefulWidget {
   State<ViewProfile> createState() => _ViewProfileState();
 }
 
+List<ContactModal> favorites = [];
+
 class _ViewProfileState extends State<ViewProfile> {
 
   TextEditingController txtname = TextEditingController();
@@ -111,10 +113,8 @@ class _ViewProfileState extends State<ViewProfile> {
                     ],
                     ),
                 ),
-                  //path != null ?
-                  //ClipOval(child: Image.network("https://cdn-icons-png.flaticon.com/512/3445/3445053.png",height: 120,width: 120,fit: BoxFit.fill,),)
-                      //:
-                 // ClipOval(child: (File("$path"),height: 120,width: 120,fit: BoxFit.fill,),)
+
+
                  contact[index].img == null ?
                  CircleAvatar(radius: 60,backgroundImage: NetworkImage("https://cdn-icons-png.flaticon.com/512/3445/3445053.png"),)
                   :
@@ -149,20 +149,47 @@ class _ViewProfileState extends State<ViewProfile> {
                   ),
                 ),
                 Container(height:1,width: double.infinity,color: Colors.lightBlue.shade100),
-                InkWell(onTap: () {
 
-                  ContactModal temp = ContactModal(name: contact[index].name,number: contact[index].number,img: contact[index].img,fav:true);
-                   setState(() {
-                     contact[index].fav = true;
-                     liked.add(temp);
-                     print(liked);
-                   });
+                  contact[index].fav == false ?
+                  InkWell(onTap: () {
+
+                    ContactModal temp = ContactModal(name: contact[index].name,number: contact[index].number,img: contact[index].img);
+                    setState(() {
+                      favorites.add(temp);
+
+                      contact[index].fav = true ;
+
+                    });
                   },
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 7.0,horizontal: 15),
-                    child: Text("Add to Favorites",style: TextStyle(color: Colors.lightBlueAccent,fontSize: 18)),
-                  ),
-                ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 7.0,horizontal: 15),
+                      child: Text("Add to Favorites",style: TextStyle(color: Colors.lightBlueAccent,fontSize: 18)),
+                    ),
+                  ) :
+                  InkWell(onTap: () {
+                    for(int i = 0 ; i< favorites.length ; i++)
+                      {
+                        if(favorites[i].name == contact[index].name)
+                          {
+                            setState(() {
+                              favorites.removeAt(i);
+                            });
+
+                          }
+                      }
+
+                   setState(() {
+
+                     contact[index].fav = false;
+
+                   });
+                  } ,
+                    child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 7.0,horizontal: 15),
+                    child: Text("Remove to Favorites",style: TextStyle(color: Colors.lightBlueAccent,fontSize: 18)),
+            ),
+          )
+
               ],),),
 
               SizedBox(height: 15),
@@ -339,3 +366,33 @@ class _ViewProfileState extends State<ViewProfile> {
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//path != null ?
+//ClipOval(child: Image.network("https://cdn-icons-png.flaticon.com/512/3445/3445053.png",height: 120,width: 120,fit: BoxFit.fill,),)
+//:
+// ClipOval(child: (File("$path"),height: 120,width: 120,fit: BoxFit.fill,),)
