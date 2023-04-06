@@ -18,6 +18,7 @@ class ViewProfile extends StatefulWidget {
 }
 
 List<ContactModal> favorites = [];
+List<ContactModal> recents = [];
 
 class _ViewProfileState extends State<ViewProfile> {
 
@@ -92,6 +93,12 @@ class _ViewProfileState extends State<ViewProfile> {
                             InkWell(onTap: () async {
                               String number = "tel: ${contact[index].number}";
                               await launchUrl(Uri.parse(number));
+
+                              ContactModal temp = ContactModal(name: contact[index].name,number: contact[index].number);
+                              setState(() {
+                                recents.add(temp);
+                              });
+
                                 },
                              child: Tabs(Icon(Icons.call,size: 20,color: Colors.blue,))),
 
@@ -265,7 +272,7 @@ class _ViewProfileState extends State<ViewProfile> {
                       DecorationImage(image: FileImage(File("$path")),fit: BoxFit.cover)),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 9),
             TextField(
 
               controller: txtname =  TextEditingController(text: "${contact[index].name}"),
@@ -280,7 +287,7 @@ class _ViewProfileState extends State<ViewProfile> {
                 enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue),borderRadius: BorderRadius.circular(20)),
 
               ),),
-            SizedBox(height: 10),
+            SizedBox(height: 9),
 
             TextField(controller: txtnumber = TextEditingController(text: "${contact[index].number}"),
 
@@ -295,7 +302,7 @@ class _ViewProfileState extends State<ViewProfile> {
                 enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue),borderRadius: BorderRadius.circular(20)),
 
               ),),
-            SizedBox(height: 10),
+            SizedBox(height: 9),
             ElevatedButton(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.lightBlueAccent.shade100),
               child: Text("✔  Update ✔",style: TextStyle(fontSize: 25)),

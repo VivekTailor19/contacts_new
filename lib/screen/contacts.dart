@@ -17,7 +17,7 @@ class Contacts extends StatefulWidget {
 }
 
 List<ContactModal> contact = [
-  ContactModal(name: "Annie",number: "7041460635",img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVQfIUSq2Zxter-cgAL8HqDI4H5WEX_EMcw&usqp=CAU"),
+  ContactModal(name: "Annie",number: "9898787897",img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVQfIUSq2Zxter-cgAL8HqDI4H5WEX_EMcw&usqp=CAU"),
   ContactModal(name: "Annie Roberts",number: "9313977271",img: "https://besttoys4toddlers.com/wp-content/uploads/2020/02/25-simple-acts-of-kindness-for-toddlers-and-preschoolers.jpg"),
   ContactModal(name: "Antony Joe",number: "9904177670",img: "https://video-images.vice.com/articles/5c77d16ff260b50009c208f2/lede/1551359167925-IMG_0392.jpeg?crop=1xw:0.5966xh;0xw,0.0295xh&resize=1200:*"),
   ContactModal(name: "Arry Rose",number: "7623985418",img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAyLQ3LBVM7pszD1a6bFH2o87HmOC--mSihA&usqp=CAU"),
