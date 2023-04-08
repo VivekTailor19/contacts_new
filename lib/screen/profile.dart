@@ -45,7 +45,6 @@ class _ProfileState extends State<Profile> {
                     Text("Pro Flutter Developer",style: TextStyle(wordSpacing: 2,color: Colors.pink.shade700,fontSize: 30),),
                     SizedBox(height: 38),
 
-
                     Padding(
                       padding:  EdgeInsets.all( 8.0),
                       child: Column(crossAxisAlignment: CrossAxisAlignment.start,
