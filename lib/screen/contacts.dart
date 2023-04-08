@@ -17,16 +17,16 @@ class Contacts extends StatefulWidget {
 }
 
 List<ContactModal> contact = [
-  ContactModal(name: "Annie",number: "9898787897",img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVQfIUSq2Zxter-cgAL8HqDI4H5WEX_EMcw&usqp=CAU"),
-  ContactModal(name: "Annie Roberts",number: "9313977271",img: "https://besttoys4toddlers.com/wp-content/uploads/2020/02/25-simple-acts-of-kindness-for-toddlers-and-preschoolers.jpg"),
-  ContactModal(name: "Antony Joe",number: "9904177670",img: "https://video-images.vice.com/articles/5c77d16ff260b50009c208f2/lede/1551359167925-IMG_0392.jpeg?crop=1xw:0.5966xh;0xw,0.0295xh&resize=1200:*"),
-  ContactModal(name: "Arry Rose",number: "7623985418",img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAyLQ3LBVM7pszD1a6bFH2o87HmOC--mSihA&usqp=CAU"),
-  ContactModal(name: "Ashley Doe",number: "9910999821",img: "https://djfromtheorphanage.files.wordpress.com/2017/10/orphanchild.jpg?w=636"),
-  ContactModal(name: "Albert",number: "9898637200",img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8YzMFXf3oqGyG97t7mTwiM9a1RbSeiq2v_9JGeoFNEzTbI-4Tjs917jz438nuxIrvdmk&usqp=CAU"),
-  ContactModal(name: "Joe",number: "7046632531",img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVQfIUSq2Zxter-cgAL8HqDI4H5WEX_EMcw&usqp=CAU"),
-  ContactModal(name: "Dix",number: "9825656099",img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq1EmW2gBA4WYDQBJDSAlfhSlGL_PlbCxPMB8JQTPyfUMSvMtJLye_k0szy_opdL7CGeY&usqp=CAU"),
-  ContactModal(name: "Sam",number: "9033079330",img: "https://www.shemrock.com/blogs/wp-content/uploads/2016/06/charity.jpg"),
-  ContactModal(name: "Dars",number: "9013151515",img: "https://media.istockphoto.com/id/1195063548/photo/cheerful-girl-receives-food-donation-while-volunteering-in-food-bank.jpg?s=612x612&w=0&k=20&c=vmndnTHuwPwRKH4RnenUqZgiEKfv8fVI7mUKcFmKkdo="),
+  ContactModal(name: "Annie",number: "9898787897"),
+  ContactModal(name: "Annie Roberts",number: "9313977271"),
+  ContactModal(name: "Antony Joe",number: "9904177670"),
+  ContactModal(name: "Arry Rose",number: "7623985418"),
+  ContactModal(name: "Ashley Doe",number: "9910999821"),
+  ContactModal(name: "Albert",number: "9898637200"),
+  ContactModal(name: "Joe",number: "7046632531"),
+  ContactModal(name: "Dix",number: "9825656099"),
+  ContactModal(name: "Sam",number: "9033079330"),
+  ContactModal(name: "Dars",number: "9013151515"),
 ];
 
   List<ContactModal> liked = [];
