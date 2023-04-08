@@ -19,8 +19,6 @@ samples, guidance on mobile development, and a full API reference.
 <p>
 
 <video controls
-      loop
-      autoplay
       src = "https://user-images.githubusercontent.com/119835214/230728106-96a7b36e-4e39-46a0-bf6f-0d48936abb35.mp4" height="45%" width="30%">
 </video>
   
